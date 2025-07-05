@@ -1,1 +1,0 @@
-export const connectionStr= "mongodb+srv://saxenakaustubha:asdfghjkl@cluster0.bdbwg0z.mongodb.net/Bookenplek?retryWrites=true&w=majority&appName=Cluster0"  
