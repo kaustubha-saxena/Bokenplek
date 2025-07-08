@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Sale from "./components/Sale";
+
+import Footer from "./components/Footer/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -19,8 +20,9 @@ export default function RootLayout({ children }) {
 
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <Sale /> */}
+        
         {children}
+        <Footer/>
         <script src="https://cdn.lordicon.com/lordicon.js"></script>
       </body>
     </html>

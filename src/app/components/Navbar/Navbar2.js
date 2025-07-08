@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRef } from 'react'
 
 
+
 const Navbar2 = () => {
 
   const searchInputRef = useRef(null);
@@ -13,9 +14,11 @@ const Navbar2 = () => {
   return (
     <>
 
-      <nav className=" flex justify-between items-center w-100% h-1 0px p-8 sticky top-0   text-white z-99 bg-black  absolute top-0" >
+      <nav className=" flex justify-between items-center w-[100%] h-1  p-8  sticky   top-0   text-white z-99 bg-black" >
         <div className='flex  items-center  w-1/2  '>
-          <Image src="/logo/Logo2.png" alt='Logo' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" width={100} height={100} className='   xl:w-[180px]  lg:w-[150px]' />
+          <Link href={"/"} >
+            <Image src="/logo/Logo2.png" alt='Logo' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" width={100} height={100} className=' hover:cursor-pointer  xl:w-[180px]  lg:w-[150px]' />
+          </Link>
 
 
           <div className='flex items-center justify-center  w-1/2'>

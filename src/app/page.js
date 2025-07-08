@@ -3,19 +3,21 @@ import Navbar2 from "./components/Navbar/Navbar2";
 import Hero from "./components/columns/hero";
 import Hero2 from "./components/columns/hero2";
 import NewArrivals from "./components/columns/NewArrivals";
-import SimilarBooks from "./components/SimilarBooks";
+import BestSeller from "./components/columns/BestSeller";
+import TopBiography from "./components/columns/TopBiography";
+import Footer from "./components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <Navbar2 />
+      
       
       <Hero2 />
       <NewArrivals/>
-
+      <TopBiography/>
+      <BestSeller/>
       
       
-      <div className="h-[1000px] bg-black"></div>
-
+     
     </>
   );
 }

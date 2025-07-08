@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Bookcard from '../bookcard'
-import { arr } from '../../../../backend/Final_Data'
+
 import { useEffect, useState } from 'react'
 import PageHeading from '../Headings/PageHeading'
 
@@ -12,7 +12,7 @@ const NewArrivals = () => {
 
     const [Book, setBook] = useState([])
     const [loaded, setloaded] = useState(false)
-     const fetchbook = async () => {
+    const fetchbook = async () => {
         let res = await fetch("/api/fetchbook", {
             method: "POST",
             body: JSON.stringify({
@@ -30,20 +30,17 @@ const NewArrivals = () => {
 
     useEffect(() => {
 
-        // console.log("loaded");
-
-        // fetchData()
         fetchbook();
 
     }, [])
 
 
     return (
-        <div className='w-full h-[100vh] bg-black absolute top-[100vh] text-white'>
+        <div className='w-full h-[80vh] bg-black relative top-0 text-white after:content-[""] after:h-[1px] after:w-full after:bg-slate-100 after:absolute after:bottom-0 after-left-0'>
             < PageHeading Heading="New Arrivals" />
 
 
-            {loaded ? <div className='flex justify-center items-center gap-30 w-full mt-15 flex-wrap '>
+            {loaded ? <div className='flex justify-center items-center lg:gap-20 xl:gap-30 w-full mt-15 flex-wrap lg:flex-1/4 '>
 
 
 

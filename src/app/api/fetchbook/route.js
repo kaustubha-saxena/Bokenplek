@@ -7,11 +7,12 @@ export async function POST(request) {
   let data = await request.json();
 
   await mongoose.connect(connectionStr).then(() => {
-    console.log("sdafjhasdkfjhasfkjhslkfjhsadf");
+    // console.log("sdafjhasdkfjhasfkjhslkfjhsadf");
     console.log(data);
 
   })
   const a = await Bookmodel.find(data);
+  console.log("a.length",a.length);
   
 
   return NextResponse.json(a)

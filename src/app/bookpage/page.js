@@ -3,8 +3,6 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation';
 import Navbar2 from '@/app/components/Navbar/Navbar2'
-import mongoose from 'mongoose';
-import { connectionStr } from '@/lib/connection';
 import SimilarBooks from '../components/SimilarBooks';
 
 const page = ({ params }) => {
@@ -45,17 +43,17 @@ const page = ({ params }) => {
     return (
         <>
             <Navbar2 />
-
+            
             {loaded ? <> <div className='flex py-10 px-20 w-full h-[80vh] text-white bg-black'>
                 <div className='w-[40%]  flex justify-center items-center '>
 
 
-                    <img className=' mx-auto h-[80%] ' src="/books/Adventure/theHobbit.png" alt="" />
+                    <img className=' mx-auto h-[80%] ' src={`/books/${book.genre}/${book.imgName}.png`}   alt="" />
 
                 </div>
                 <div className='p-8   flex-col h-full w-[60%]'>
                     <div className='my-4'>
-                        <h3 className='text-4xl font-bold'>{book.title}</h3>
+                        <h3 className='text-4xl font-bold font-[Fredoka]'>{book.title}</h3>
                         <p className='font-semibold'>Author: {book.author}</p>
                         <p className='font-semibold'>{book.rating}</p>
                     </div>
@@ -93,7 +91,7 @@ const page = ({ params }) => {
                         </div>
                         <div>
                             <ul>
-                                <li>{book.title}: </li>
+                                <li>{book.title} </li>
                                 <li>{book.author} </li>
                                 <li>{book.genre} </li>
                                 <li>{book.isbn} </li>
