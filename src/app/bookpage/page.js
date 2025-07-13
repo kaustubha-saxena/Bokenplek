@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import SimilarBooks from '../components/SimilarBooks';
 import { useSelector, useDispatch } from 'react-redux'
 import { addToCart } from '../Redux/cartslice';
+import { Suspense } from 'react'
 import { toast } from 'react-toastify';
 const Page = ({ params }) => {
 
@@ -44,6 +45,8 @@ const Page = ({ params }) => {
 
 
     return (
+        <Suspense>
+
         <>
 
 
@@ -55,7 +58,7 @@ const Page = ({ params }) => {
 
                     {/* {
                         book.tag === "Best Seller" ? <div className='w-15 absolute top-[-15px] right-[-15px]'><img src="/icons/best-seller.png" alt="" /></div> : <></>
-                    } */}
+                        } */}
                 </div>
                 <div className='p-8 lg:pt-10  xl:p-12 flex flex-col h-full w-[60%] md:gap-4 lg:gap-6 '>
                     <div className=''>
@@ -125,6 +128,7 @@ const Page = ({ params }) => {
 
 
         </>
+</Suspense>
     )
 }
 

@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import PageHeading from '../components/Heros/Header'
 import Link from 'next/link'
+import { Suspense } from 'react'
 const Page = () => {
 
   const searchParams = useSearchParams();
@@ -52,6 +53,8 @@ const Page = () => {
 
 
   return (
+    <Suspense>
+
     <>
       
 
@@ -79,6 +82,7 @@ const Page = () => {
       </div>
 
     </>
+            </Suspense>
   )
 }
 
