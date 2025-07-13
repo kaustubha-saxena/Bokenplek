@@ -11,7 +11,7 @@ const GenreCard = ({props}) => {
                 <img className='object-cover' src={`/header/${props.genre}.jpg`} alt="" />
                 <div className='w-full h-full bg-black opacity-50 absolute top-0 '></div>
                 <div className='absolute top-0  w-full h-full flex justify-center items-center p-3 z-5 '>
-                    <p className='text-white font-semibold lg:font-bold text-2xl text-center xl:text-xl lg:text-lg md:text-base 2xl:text-green-500 xl:text-red-600 lg:text-purple-600'>{props.genre.toUpperCase().replaceAll("-"," ")}</p>
+                    <p className='text-white font-semibold lg:font-bold text-2xl text-center xl:text-xl lg:text-lg md:text-base '>{props.genre.toUpperCase().replaceAll("-"," ")}</p>
                 </div>
             </div>
     </Link>
