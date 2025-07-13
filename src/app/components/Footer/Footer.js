@@ -3,11 +3,11 @@ import Link from 'next/link'
 const Footer = () => {
     return (
         <>
-            <div className='w-full h-[50vh] relative bottom-0   text-[#EEEEEE] bg-[#121212] after:content-[""] after:h-[3px] after:w-full after:bg-[#F4B400] after:absolute after:top-0 after-left-0'>
+            <div className='w-full h-[50vh] relative bottom-0   text-[#EEEEEE] bg-[#212121] after:content-[""] after:h-[3px] after:w-full after:bg-[#F4B400] after:absolute after:top-0 after-left-0'>
 
                 <div className='flex   gap-30  p-10'>
                     <div className='flex-col w-[40%] gap-4  '>
-                        <Link href={"/"}><img className="w-40" src="/logo/Logo2.png" alt="" /></Link>
+                        <Link href={"/"}><img className="w-40" src="/logo/Logo1.png" alt="" /></Link>
                         <div className='my-4 '><p>Discover the joy of reading with Bookenplek, your trusted online bookstore since 2021. Born out of a love for books, Bookenplek brings you a curated collection of novels, academic texts, and hidden literary gems. Whether you're after new releases or timeless classics, we’re here to make reading more accessible and enjoyable. Join the Bookenplek community and let your next great story begin here!
 
                         </p></div>

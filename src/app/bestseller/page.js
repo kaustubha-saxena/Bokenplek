@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import Bookcard from '../components/bookcard'
+import Bookcard from '../components/cards/bookcard'
 import Navbar2 from '../components/Navbar/Navbar'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -39,23 +39,17 @@ const [Book, setBook] = useState([])
     <Navbar2/>
 
 
-<div className='w-full px-6 py-10  '>
+<div className='w-[100vw]   '>
 
-    {loaded ? <div className='flex justify-center items-center lg:gap-x-20 xl:gap-x-30 lg:gap-y-15 xl:gap-y-20  w-full flex-wrap lg:flex-1/4 '>
+    {loaded ? <div className='flex justify-center items-center lg:gap-10 xl:gap-10  w-[100%] flex-wrap lg:flex-1/4 py-10 px-15 '>
 
+            {
+              Book.map(book => {
+                return <Bookcard key={book._id} props={book} />
+              })
+            }
 
-
-                
-
-                {
-                  Book.map(book=>{
-                    return <Bookcard key={book._id} props={book} />
-                  })
-                }
-
-
-
-            </div> : <></>}
+          </div> : <></>}
     
 </div>
 

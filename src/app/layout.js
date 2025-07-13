@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar2 from "./components/Navbar/Navbar2";
+import { ReduxProvider } from './Redux/provider'
+import { ToastContainer } from "react-toastify";
 
 import Footer from "./components/Footer/Footer";
 const geistSans = Geist({
@@ -16,15 +19,19 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <ReduxProvider>
+
       <body
 
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        
+className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+>
+              <Navbar2/>
         {children}
-        <Footer/>
+        <ToastContainer /> 
+        {/* <Footer/> */}
         <script src="https://cdn.lordicon.com/lordicon.js"></script>
       </body>
+        </ReduxProvider>
     </html>
   );
 }

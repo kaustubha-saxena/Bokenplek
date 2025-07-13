@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import Bookcard from '../bookcard'
+import Bookcard from '../cards/bookcard'
 
 import { useEffect, useState } from 'react'
 import PageHeading from '../Headings/PageHeading'
@@ -23,7 +23,7 @@ const NewArrivals = () => {
 
             setBook(re)
             setloaded(true)
-            console.log(re);
+            console.log(re.length);
         })
 
     }
@@ -36,16 +36,17 @@ const NewArrivals = () => {
 
 
     return (
-        <div className='w-full h-[80vh] bg-black relative top-0 text-white after:content-[""] after:h-[1px] after:w-full after:bg-slate-100 after:absolute after:bottom-0 after-left-0'>
+        <div className='w-full h-fit py-5  relative top-0 text-white after:content-[""] after:h-[1px] after:w-full after:bg-slate-100 after:absolute after:bottom-0 after-left-0'>
             < PageHeading Heading="New Arrivals" />
 
 
-            {loaded ? <div className='flex justify-center items-center lg:gap-20 xl:gap-30 w-full mt-15 flex-wrap lg:flex-1/4 '>
+            {loaded ? <div className='flex justify-center items-center  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-15 flex-wrap lg:flex-1/4 '>
 
 
 
                 <Bookcard props={Book[0]} />
                 <Bookcard props={Book[1]} />
+                <Bookcard props={Book[2]} />
                 <Bookcard props={Book[3]} />
                 <Bookcard props={Book[4]} />
 

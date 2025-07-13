@@ -1,16 +1,18 @@
 "use client"
 import React from 'react'
-import Bookcard from '../components/bookcard'
-import Navbar2 from '../components/Navbar/Navbar'
+import Bookcard from '../components/cards/bookcard'
+import Navbar2 from '../components/Navbar/Navbar2'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import Biography from '../components/Heros/biography'
+import PageHeading from '../components/Heros/Header'
+import Link from 'next/link'
 const page = () => {
 
   const searchParams = useSearchParams();
   const genre = searchParams.get('genre');
-
+  // const [genre, setgenre] = useState(searchParams.get('genre'))
   const [Book, setBook] = useState([])
+  const [Header, setHeader] = useState([])
   const [loaded, setloaded] = useState(false)
   const fetchbook = async () => {
     let res = await fetch("/api/fetchbook", {
@@ -25,6 +27,20 @@ const page = () => {
       setloaded(true)
     })
 
+    res = await fetch("/api/fetchheader", {
+      method: "POST",
+      body: JSON.stringify({ genre: genre })
+    })
+    data = await res.json().then((result) => {
+
+      setHeader(result[0])
+
+
+      setloaded(true)
+    })
+
+
+
 
   }
 
@@ -37,20 +53,28 @@ const page = () => {
 
   return (
     <>
-      <Navbar2/>
       
-<Biography/>
-      <div className='w-full px-6 py-10  '>
 
-        {loaded ? <div className='flex justify-center items-center lg:gap-x-20 xl:gap-x-30 lg:gap-y-15 xl:gap-y-20  w-full flex-wrap lg:flex-1/4 '>
+      <PageHeading params={Header} />
+      <div className='w-full   '>
 
-          {
-            Book.map(book => {
-              return <Bookcard key={book._id} props={book} />
-            })
-          }
+        {loaded ? <>
+          <div className='text-white  pt-8 px-4'>
+            <Link className=' hover:underline ' href={"/"}>Home </Link>&gt;
+            <Link className='hover:underline' href={"/genre"}>Genre </Link> &gt;
+            <Link className='hover:underline' href={`/collection?genre=${genre}`}>{genre}</Link>
+          </div>
+          <div className='flex justify-center items-center lg:gap-10 xl:gap-10  w-screen flex-wrap lg:flex-1/4 py-10 px-15 '>
 
-        </div> : <></>}
+            {
+              Book.map(book => {
+                return <Bookcard key={book._id} props={book} />
+              })
+            }
+
+          </div></> : <>
+          
+        </>}
 
       </div>
 

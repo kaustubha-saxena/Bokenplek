@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import Bookcard from '../bookcard'
+import Bookcard from '../cards/bookcard'
 import { arr } from '../../../../backend/Final_Data'
 import { useEffect, useState } from 'react'
 import PageHeading from '../Headings/PageHeading'
