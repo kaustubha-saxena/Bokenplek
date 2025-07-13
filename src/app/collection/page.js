@@ -93,14 +93,14 @@
 // app/collection/page.js
 import { Suspense } from 'react';
 import Navbar2 from '../components/Navbar/Navbar2';
-import ClientBookPage from './ClientBookPage';
+import ClientCollectionPage from './ClientCollectionPage';
 
 export default function Page() {
   return (
     <>
       <Navbar2 />
       <Suspense fallback={<div className='text-white p-8'>Loading collection...</div>}>
-        <ClientBookPage />
+        <ClientCollectionPage />
       </Suspense>
     </>
   );

@@ -1,4 +1,3 @@
-// app/collection/ClientBookPage.jsx
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -6,7 +5,7 @@ import Bookcard from '../components/cards/bookcard';
 import PageHeading from '../components/Heros/Header';
 import Link from 'next/link';
 
-const ClientBookPage = () => {
+const ClientCollectionPage = () => {
   const searchParams = useSearchParams();
   const genre = searchParams.get('genre');
   const [Book, setBook] = useState([]);
@@ -60,4 +59,4 @@ const ClientBookPage = () => {
   );
 };
 
-export default ClientBookPage;
+export default ClientCollectionPage;
