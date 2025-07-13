@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addToCart, removeFromCart } from '../Redux/cartslice';
 import Link from 'next/link';
 
-const page = () => {
+const Page = () => {
 
   const cartItems = useSelector((state) => state.cart.cartItems);
   let totalSalePrice=0;
@@ -108,4 +108,4 @@ shipping=40
   )
 }
 
-export default page
+export default Page

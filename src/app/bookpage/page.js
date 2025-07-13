@@ -6,7 +6,7 @@ import SimilarBooks from '../components/SimilarBooks';
 import { useSelector, useDispatch } from 'react-redux'
 import { addToCart } from '../Redux/cartslice';
 import { toast } from 'react-toastify';
-const page = ({ params }) => {
+const Page = ({ params }) => {
 
     const cartItems = useSelector((state) => state.cart.cartItems);
 
@@ -129,4 +129,4 @@ const page = ({ params }) => {
 }
 
 
-export default page
+export default Page

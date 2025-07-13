@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import PageHeading from '../components/Heros/Header'
 import Link from 'next/link'
-const page = () => {
+const Page = () => {
 
   const searchParams = useSearchParams();
   const genre = searchParams.get('genre');
@@ -82,4 +82,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
