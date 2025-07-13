@@ -58,4 +58,4 @@ const [Book, setBook] = useState([])
   )
 }
 
-export default BeastSeller
+export default BeastSeller;
