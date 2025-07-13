@@ -4,9 +4,9 @@ import Bookcard from '../components/cards/bookcard'
 import Navbar2 from '../components/Navbar/Navbar'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-const Page = ()=> {
+const BeastSeller = ()=> {
 
-  
+
 const searchParams = useSearchParams();
     const isbn = searchParams.get('genre');
 
@@ -58,4 +58,4 @@ const [Book, setBook] = useState([])
   )
 }
 
-export default Page
+export default BeastSeller
