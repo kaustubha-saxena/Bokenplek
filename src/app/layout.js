@@ -29,7 +29,7 @@ className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         {children}
         <ToastContainer /> 
         {/* <Footer/> */}
-        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <script src="https://cdn.lordicon.com/lordicon.js" async></script>
       </body>
         </ReduxProvider>
     </html>
