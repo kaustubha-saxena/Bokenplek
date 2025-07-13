@@ -36,7 +36,7 @@ const ExploreGenre = () => {
 
 
                     {genre.map(item => {
-                        return <GenreCard key={"_id"} props={item} />
+                        return <GenreCard key={item._id} props={item} />
                     })
                     }
 

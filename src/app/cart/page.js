@@ -44,7 +44,7 @@ shipping=40
 
             {
               cartItems.map(book=>{
-                return  <CartCard params={book} />
+                return  <CartCard key={book.isbn} params={book} />
               })
             }           
         
@@ -61,7 +61,7 @@ shipping=40
             >
             </lord-icon></div>
             <p className='text-2xl font-bold'>Your cart is empty!</p>
-            <p className='text-lg font-medium'>It's a good day to buy the items you saved for later</p>
+            <p className='text-lg font-medium'>It&apos;s a good day to buy the items you saved for later</p>
             <div className=' w-full flex justify-center items-center my-5'>
 
             <Link href={"/"}>

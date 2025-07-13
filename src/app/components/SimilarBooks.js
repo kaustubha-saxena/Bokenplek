@@ -54,7 +54,7 @@ const SimilarBooks = ({ props }) => {
 
                             if (item.title != props[1] && count <= 5) {
                                 count = count + 1;
-                                return <Bookcard props={item} />
+                                return <Bookcard key={item.isbn} props={item} />
                             }
 
                         })}

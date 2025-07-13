@@ -9,7 +9,7 @@ const HeroHeading = ({Heading, Para,Btn1}) => {
             <div className="flex lg:text-sm xl:text-lg 2xl:text-xl  w-fit font-bold text-black gap-10 mx-auto px-8 relative mt-30   ">
 
                 <button className='relative px-8 py-4 bg-amber-50 hover:cursor-pointer before:content-[""] before:h-[100px] before:w-[100px] before:bg-amber-300 before:top-[-25%] lg:before:left-[-100%] before:absolute before:rounded-full hover:before:scale-600 hover:before:transition-transform before:duration-400 before:transition-timing-function: var(--ease-in-out); overflow-hidden before:opacity-30' ><div className='relative  z-6'>Shop Now</div></button>
-                <button className='relative px-8 py-4 bg-amber-500 hover:cursor-pointer before:content-[""] before:h-[100px] before:w-[100px] before:bg-white before:top-[-25%] lg:before:left-[-75%] before:absolute before:rounded-full hover:before:scale-600 hover:before:transition-transform before:duration-400 before:transition-timing-function: var(--ease-in-out); overflow-hidden before:opacity-25' ><div className='relative  z-6'>See What's New</div></button>
+                <button className='relative px-8 py-4 bg-amber-500 hover:cursor-pointer before:content-[""] before:h-[100px] before:w-[100px] before:bg-white before:top-[-25%] lg:before:left-[-75%] before:absolute before:rounded-full hover:before:scale-600 hover:before:transition-transform before:duration-400 before:transition-timing-function: var(--ease-in-out); overflow-hidden before:opacity-25' ><div className='relative  z-6'>See What&apos;s New</div></button>
 
 
 

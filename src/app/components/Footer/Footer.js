@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className='flex   gap-30  p-10'>
                     <div className='flex-col w-[40%] gap-4  '>
                         <Link href={"/"}><img className="w-40" src="/logo/Logo1.png" alt="" /></Link>
-                        <div className='my-4 '><p>Discover the joy of reading with Bookenplek, your trusted online bookstore since 2021. Born out of a love for books, Bookenplek brings you a curated collection of novels, academic texts, and hidden literary gems. Whether you're after new releases or timeless classics, we’re here to make reading more accessible and enjoyable. Join the Bookenplek community and let your next great story begin here!
+                        <div className='my-4 '><p>Discover the joy of reading with Bookenplek, your trusted online bookstore since 2021. Born out of a love for books, Bookenplek brings you a curated collection of novels, academic texts, and hidden literary gems. Whether you're after new releases or timeless classics, we&apos;re here to make reading more accessible and enjoyable. Join the Bookenplek community and let your next great story begin here!
 
                         </p></div>
                         <div className='flex gap-6'>
