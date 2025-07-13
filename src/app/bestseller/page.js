@@ -2,13 +2,12 @@
 import React from 'react'
 import Bookcard from '../components/cards/bookcard'
 import Navbar2 from '../components/Navbar/Navbar'
-import { useSearchParams } from 'next/navigation'
+
 import { useEffect, useState } from 'react'
 const BeastSeller = ()=> {
 
 
-const searchParams = useSearchParams();
-    const isbn = searchParams.get('genre');
+
 
 const [Book, setBook] = useState([])
     const [loaded, setloaded] = useState(false)
