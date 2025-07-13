@@ -6,9 +6,6 @@ import Navbar2 from '../components/Navbar/Navbar'
 import { useEffect, useState } from 'react'
 const BeastSeller = ()=> {
 
-
-
-
 const [Book, setBook] = useState([])
     const [loaded, setloaded] = useState(false)
     const fetchbook = async () => {

@@ -35,7 +35,7 @@ const CartCard = ({ params }) => {
                         <button onClick={handleAdd} className='px-3 border-2 border-[#787878] hover:bg-[#9e9e9e]'>+</button>
                     </div>
                     <div className='absolute top-0 right-1.5'>
-                        <button onClick={removeAll} className='bg-amber-200'>
+                        <button onClick={removeAll} className=''>
                         <img  className='w-3' src="./icons/close.png" alt="" />
 
                         </button>
