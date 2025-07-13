@@ -4,8 +4,9 @@ import Bookcard from '../components/cards/bookcard'
 import Navbar2 from '../components/Navbar/Navbar'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-const Page = () => {
+const Page = ()=> {
 
+  
 const searchParams = useSearchParams();
     const isbn = searchParams.get('genre');
 
