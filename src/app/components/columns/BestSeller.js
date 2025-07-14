@@ -4,7 +4,7 @@ import React from 'react'
 import Bookcard from '../cards/bookcard'
 import { useEffect, useState } from 'react'
 import PageHeading from '../Headings/PageHeading'
-
+import Link from 'next/link'
 
 
 const BestSeller = () => {
@@ -40,8 +40,15 @@ const BestSeller = () => {
 
 
     return (
-        <div className='w-full h-fit py-5   relative top-0 text-white after:content-[""] after:h-[1px] after:w-full after:bg-slate-100 after:absolute after:bottom-0 after-left-0'>
-            < PageHeading Heading="Best Sellers" />
+        <div className='w-full h-fit py-5   relative top-0 text-white '>
+           <div>
+
+                    < PageHeading Heading="Best Sellers" />
+                    <div className='absolute top-10 right-5 font-medium  lg:text-xs xl:text-sm text-gray-300 hover:font-bold hover:cursor-pointer'>
+                        <Link href={"/bestseller"}>View All
+                        </Link>
+                    </div>
+                </div>
 
 
             {loaded ? <div className='flex justify-center items-center  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-15 flex-wrap lg:flex-1/4 '>

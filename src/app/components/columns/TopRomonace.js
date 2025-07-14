@@ -6,10 +6,7 @@ import { useEffect, useState } from 'react'
 import PageHeading from '../Headings/PageHeading'
 import Link from 'next/link'
 
-
-
-
-const TopBiography = () => {
+const TopRomance = () => {
 
     const [Book, setBook] = useState([])
     const [loaded, setloaded] = useState(false)
@@ -17,7 +14,7 @@ const TopBiography = () => {
         let res = await fetch("/api/fetchbook", {
             method: "POST",
             body: JSON.stringify({
-                genre: "biography"
+                genre: "romance"
             })
         })
         let data = await res.json().then((re) => {
@@ -42,7 +39,7 @@ const TopBiography = () => {
             <div className='w-full h-fit py-5 relative top-0 text-white  bg-[#212121]'>
                 <div>
 
-                    < PageHeading Heading="Top Biographies" />
+                    < PageHeading Heading="Top Romance" />
                     <div className='absolute top-10 right-5 font-medium  lg:text-xs xl:text-sm text-gray-300 hover:font-bold hover:cursor-pointer'>
                         <Link href={"/collection?genre=biography"}>View All
                         </Link>
@@ -52,7 +49,7 @@ const TopBiography = () => {
 
 
 
-                {loaded ? <div className='flex justify-center items-center  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-15 flex-wrap lg:flex-1/4 '>
+                {loaded ? <div className='flex justify-center items-center  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-10 flex-wrap lg:flex-1/4 '>
 
 
 
@@ -75,4 +72,4 @@ const TopBiography = () => {
     )
 }
 
-export default TopBiography
+export default TopRomance

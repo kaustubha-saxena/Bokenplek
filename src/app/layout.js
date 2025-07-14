@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+     
       <ReduxProvider>
 
       <body
@@ -28,10 +29,11 @@ className={`${geistSans.variable} ${geistMono.variable} antialiased`}
               <Navbar2/>
         {children}
         <ToastContainer /> 
-        {/* <Footer/> */}
+        <Footer/>
         <script src="https://cdn.lordicon.com/lordicon.js" async></script>
       </body>
         </ReduxProvider>
+       
     </html>
   );
 }

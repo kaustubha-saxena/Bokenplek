@@ -40,10 +40,11 @@ const ClientBookPage = () => {
 
   return (
     <>
+
       <div className='flex pt-20 px-20 h-fit w-full text-white bg-[#2a2a2a]'>
         <div className='w-[40%] flex justify-center items-center relative'>
           <img
-            className='mx-auto 2xl:h-[350px] xl:h-[330px] lg:h-[300px] md:h-[250px]'
+            className='mx-auto 2xl:h-[350px] rounded-xl xl:h-[330px] lg:h-[300px] md:h-[250px]'
             src={`/books/${book.genre}/${book.imgName}.png`}
             alt=''
           />

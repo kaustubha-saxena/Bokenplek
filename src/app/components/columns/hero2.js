@@ -5,6 +5,7 @@ import Autoplay from "embla-carousel-autoplay"
 import Navbar from '../Navbar/Navbar'
 const username = process.env.NEXT_PUBLIC_USERNAME;
 const password = process.env.PASSWORD;
+import Image from 'next/image'
 
 const Hero2 = () => {
   const plugin = React.useRef(
@@ -18,8 +19,15 @@ console.log(username);
    
     <div className='w-[100%] h-[100vh] overflow-hidden object-center relative  top-0 bg-transparent'>
       
+<Image
+      src="/hero.jpg"
+      priority={true}
+      fill={true}
+      alt="Picture of bookshelf"
+    />
 
-      <img className='  w-screen h-screen  object-cover' src="/hero.jpg" alt="" />
+      {/* <img className='  w-screen h-screen  object-cover' src="/hero.jpg" alt="" /> */}
+      
       
       <div className='w-full h-full bg-black absolute top-0 left-0 opacity-60'>
 

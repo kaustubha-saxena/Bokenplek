@@ -9,7 +9,7 @@ export async function POST(request) {
 
 
   await mongoose.connect(connectionStr).then(() => {
-    console.log(data);
+    // console.log(data);
 
   })
   const a = await Headermodel.find(data);

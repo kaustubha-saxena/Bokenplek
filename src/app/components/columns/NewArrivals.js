@@ -36,7 +36,7 @@ const NewArrivals = () => {
 
 
     return (
-        <div className='w-full h-fit py-5  relative top-0 text-white after:content-[""] after:h-[1px] after:w-full after:bg-slate-100 after:absolute after:bottom-0 after-left-0'>
+        <div className='w-full h-fit py-5  relative top-0 text-white '>
             < PageHeading Heading="New Arrivals" />
 
 

@@ -6,6 +6,7 @@ import NewArrivals from "./components/columns/NewArrivals";
 import BestSeller from "./components/columns/BestSeller";
 import TopBiography from "./components/columns/TopBiography";
 import Footer from "./components/Footer/Footer";
+import TopRomance from "./components/columns/TopRomonace";
 import ExploreGenre from "./components/columns/ExploreGenre";
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       <NewArrivals/>
       <TopBiography/>
       <BestSeller/>
-      
+      <TopRomance/>
       
      
     </>

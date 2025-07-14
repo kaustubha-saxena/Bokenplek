@@ -65,7 +65,7 @@ shipping=40
             <div className=' w-full flex justify-center items-center my-5'>
 
             <Link href={"/"}>
-            <button className=' mx-auto  px-10 py-3 bg-amber-500 text-lg hover:cursor-pointer font-bold text-[#2a2a2a]'>Shop Now</button>
+          <button className=' mx-auto  px-10 py-3 bg-amber-400 text-lg hover:cursor-pointer font-bold text-[#2a2a2a]'>Shop Now</button>
             </Link>
           </div>
             </div></>
@@ -98,7 +98,7 @@ shipping=40
 
           <div className=' w-full flex justify-center items-center my-18'>
 
-            <button className=' mx-auto  px-30 py-3 bg-amber-500 text-lg hover:cursor-pointer font-bold'>Buy Now</button>
+            <button className=' mx-auto  px-30 py-3 bg-amber-400 text-lg hover:cursor-pointer font-bold'>Buy Now</button>
           </div>
 
 

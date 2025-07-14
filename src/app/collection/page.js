@@ -98,7 +98,7 @@ import ClientCollectionPage from './ClientCollectionPage';
 export default function Page() {
   return (
     <>
-      <Navbar2 />
+      {/* <Navbar2 /> */}
       <Suspense fallback={<div className='text-white p-8'>Loading collection...</div>}>
         <ClientCollectionPage />
       </Suspense>
