@@ -52,7 +52,17 @@ const NewArrivals = () => {
 
 
 
-            </div> : <></>}
+            </div> : <>
+            <div className='flex justify-center items-center  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-15 flex-wrap lg:flex-1/4 '>
+
+
+
+                
+
+
+            </div>
+            
+            </>}
 
 
 

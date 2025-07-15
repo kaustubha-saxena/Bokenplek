@@ -28,8 +28,9 @@ const Genre = () => {
         <>
             {loaded ? <><div className='flex-col  pt-3 w-full'>
 
-                <h1 className='text-white font-bold text-4xl mx-4 font-[Libre] text-center my-6 mt-10'>Pick a Genre, Start Your Journey</h1>
-                <div className=' flex flex-wrap justify-center items-center mx-auto gap-5  md:py-3 lg:py-5 xl:py-7 w-full h-fit bg-[#212121] flex-1/4'>
+                <h1 className='text-white font-bold text-4xl mx-4 font-[Libre] text-center my-6 mt-10'>Explore All Genres</h1>
+                <div className=' flex flex-wrap justify-center items-center mx-auto gap-5  md:py-3 lg:py-5 xl:py-7 w-full h-fit bg-[#212121] flex-1/1'>
+                {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  w-full  bg-[#212121] '> */}
 
 
 

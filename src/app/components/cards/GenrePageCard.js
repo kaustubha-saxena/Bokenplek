@@ -8,7 +8,7 @@ const GenrePageCard = ({props}) => {
     <>
       <Link href={`/collection?genre=${props.genre}`}>
 
-        <div className=' xl:w-[350px] lg:w-[200px] xl:h-70 lg:h-30 md:w-[150px] md:h-25 rounded-xl overflow-hidden relative hover:translate-y-[-20px] hover:transition-transform duration-100 hover:cursor-pointer'>
+        <div className=' xl:w-[350px] lg:w-[250px] md:w-[200px] sm:w-[190px] xl:h-70 lg:h-40  md:h-30 sm:h-30  w-[280px] h-100 bg-amber-400 rounded-xl overflow-hidden relative hover:translate-y-[-20px] hover:transition-transform duration-100 hover:cursor-pointer'>
           <Image
             src={`/header/${props.genre}.jpg`}
             fill={true}
@@ -19,7 +19,7 @@ const GenrePageCard = ({props}) => {
           {/* <img className='object-cover' src={`/header/${props.genre}.jpg`} alt="" /> */}
           <div className='w-full h-full  absolute inset-0 bg-gradient-to-t from-black/70 to-black/30'></div>
           <div className='absolute top-0  w-full h-full flex justify-center items-center p-3 z-5 '>
-            <p className='text-white font-semibold lg:font-bold text-4xl text-center xl:text-3xl lg:text-lg md:text-base '>{props.genre.toUpperCase().replaceAll("-", " ")}</p>
+            <p className='text-white font-semibold lg:font-bold text-4xl text-center xl:text-3xl lg:text-lg md:text-base sm:text-sm '>{props.genre.toUpperCase().replaceAll("-", " ")}</p>
           </div>
         </div>
       </Link>
