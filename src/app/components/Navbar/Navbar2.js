@@ -2,19 +2,26 @@
 import React, { use } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
+
 import { useSelector, useDispatch } from 'react-redux'
+import Menu from '../menu'
+
 
 
 const Navbar2 = () => {
-const cartItems = useSelector((state) => state.cart.cartItems);
- 
-  let qty=0
+  const cartItems = useSelector((state) => state.cart.cartItems);
+const [menu, setmenu] = useState(false)
+  let qty = 0
 
+  const handlemenu=()=>{
+    setmenu(!menu)
+
+  }
 
   cartItems.forEach(element => {
-    qty=qty+element.quantity
-   
+    qty = qty + element.quantity
+
   });
   const searchInputRef = useRef(null);
 
@@ -22,10 +29,12 @@ const cartItems = useSelector((state) => state.cart.cartItems);
   return (
     <>
 
-      <nav className=" flex justify-between items-center w-[100%] h-1  p-8  absolute   top-0   text-white z-99 bg-transparent" >
+      <nav className="  justify-between items-center w-[100%] h-1  p-8  absolute    top-0   text-white z-99 hidden  md:flex " >
+
+
         <div className='flex  items-center  justify-start lg:w-1/2  md:w-[40%]  md:gap-10'>
           <Link href={"/"} >
-            <Image src="/logo/Logo1.png" alt='Logo'  width={100} height={100} className=' hover:cursor-pointer  xl:w-[180px]  lg:w-[150px]' />
+            <Image src="/logo/Logo1.png" alt='Logo' width={100} height={100} className=' hover:cursor-pointer  xl:w-[180px]  lg:w-[150px]' />
           </Link>
 
 
@@ -72,7 +81,39 @@ const cartItems = useSelector((state) => state.cart.cartItems);
           </Link> <div className='h-4 w-4 rounded-full bg-amber-200 absolute top-[-5px] right-[-5px] flex justify-center items-center   text-[#2a2a2a] text-xs font-bold'>{qty}</div> </li>
         </ul>
 
+
       </nav >
+ {menu && (
+      <Menu menu={menu} setmenu={setmenu}/>
+    )}
+
+      <nav className='flex justify-between items-center w-[100%] h-1 absolute top-0 text-white z-99 p-8 block md:hidden '>
+        <div >
+          <button onClick={handlemenu}>
+
+            <Image src="/icons/menu.svg" alt='Logo' width={100} height={100} className=' hover:cursor-pointer  sm:w-[25px]  w-[20px]' />
+          </button>
+        </div>
+        <div><Link href={"/"} >
+          <Image src="/logo/Logo1.png" alt='Logo' width={100} height={100} className=' hover:cursor-pointer  xl:w-[180px]  lg:w-[150px]' />
+        </Link></div>
+
+
+        <Link href="/cart" className='relative'>
+          <lord-icon
+            src="https://cdn.lordicon.com/ggirntso.json"
+            stroke="bold"
+            trigger="hover"
+            colors="primary:#ffffff,secondary:#ffffff"
+            width={100}
+            height={100}
+            className="cursor-pointer"
+          >
+          </lord-icon>
+          <div className='h-4 w-4 rounded-full bg-amber-200 absolute top-[-5px] right-[-5px] flex justify-center items-center   text-[#2a2a2a] text-xs font-bold'>{qty}</div>
+        </Link>
+
+      </nav>
     </>
   )
 }
