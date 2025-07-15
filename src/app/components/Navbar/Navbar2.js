@@ -95,7 +95,7 @@ const [menu, setmenu] = useState(false)
           </button>
         </div>
         <div><Link href={"/"} >
-          <Image src="/logo/Logo1.png" alt='Logo' width={100} height={100} className=' hover:cursor-pointer sm:w-[120px] md:w-[150px]  xl:w-[180px]  lg:w-[150px]' />
+          <Image src="/logo/Logo1.png" alt='Logo' width={100} height={100} className=' hover:cursor-pointer sm:w-[150px] md:w-[180px]  xl:w-[180px]  lg:w-[150px]' />
         </Link></div>
 
 
