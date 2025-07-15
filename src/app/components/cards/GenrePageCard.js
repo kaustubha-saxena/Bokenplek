@@ -8,7 +8,7 @@ const GenrePageCard = ({props}) => {
     <>
       <Link href={`/collection?genre=${props.genre}`}>
 
-        <div className=' xl:w-[350px] lg:w-[250px] md:w-[200px] sm:w-[190px] xl:h-70 lg:h-40  md:h-30 sm:h-30  w-[280px] h-100 bg-amber-400 rounded-xl overflow-hidden relative hover:translate-y-[-20px] hover:transition-transform duration-100 hover:cursor-pointer'>
+        <div className=' xl:w-[350px] lg:w-[250px] md:w-[200px] sm:w-[210px] xl:h-70 lg:h-40  md:h-30 sm:h-35  w-[280px] h-100 bg-amber-400 rounded-xl overflow-hidden relative hover:translate-y-[-20px] hover:transition-transform duration-100 hover:cursor-pointer'>
           <Image
             src={`/header/${props.genre}.jpg`}
             fill={true}
