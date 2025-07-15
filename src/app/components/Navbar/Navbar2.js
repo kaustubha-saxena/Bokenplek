@@ -23,13 +23,13 @@ const cartItems = useSelector((state) => state.cart.cartItems);
     <>
 
       <nav className=" flex justify-between items-center w-[100%] h-1  p-8  absolute   top-0   text-white z-99 bg-transparent" >
-        <div className='flex  items-center  w-1/2  '>
+        <div className='flex  items-center  justify-start lg:w-1/2  md:w-[40%]  md:gap-10'>
           <Link href={"/"} >
-            <Image src="/logo/Logo1.png" alt='Logo' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" width={100} height={100} className=' hover:cursor-pointer  xl:w-[180px]  lg:w-[150px]' />
+            <Image src="/logo/Logo1.png" alt='Logo'  width={100} height={100} className=' hover:cursor-pointer  xl:w-[180px]  lg:w-[150px]' />
           </Link>
 
 
-          <div className='flex items-center justify-center  w-1/2'>
+          <div className='flex items-center justify-center  w-1/2 '>
             <button onClick={() => {
               searchInputRef.current.focus()
 
@@ -49,11 +49,11 @@ const cartItems = useSelector((state) => state.cart.cartItems);
               </lord-icon>
             </button>
 
-            <input className=' rounded-full  bg-gray-300  border-none  px-1 py-1 focus:outline-none text-white bg-transparent placeholder:text-gray-300 ' type="text" name="search" id="search" placeholder='Search...' ref={searchInputRef} />
+            <input className=' rounded-full    border-none  px-1 py-1 focus:outline-none text-white bg-transparent placeholder:text-gray-300 ' type="text" name="search" id="search" placeholder='Search...' ref={searchInputRef} />
           </div>
         </div>
-        <ul className="flex justify-center items-center gap-4 font-medium  lg:text-xs xl:text-sm text-gray-300">
-          <li className='hover:font-bold hover:cursor-pointer '><Link href="/">Home</Link></li>
+        <ul className="flex justify-center items-center gap-4 font-normal md:text-sm  lg:text-base xl:text-lg text-gray-300 ">
+          <li className='hover:font-bold hover:cursor-pointer  '><Link href="/">Home</Link></li>
           <li className='hover:font-bold hover:cursor-pointer'><Link href="/bestseller">Best Seller</Link></li>
           <li className='hover:font-bold hover:cursor-pointer'><Link href="/dashboard">New Arrivals</Link></li>
           <li className='hover:font-bold hover:cursor-pointer'><Link href="/genre">Genre</Link></li>
