@@ -27,7 +27,7 @@ shipping=40
     <>
       <div className=' flex md:flex-row flex-col   md:px-10  xl:px-30 w-full  text-white   bg-[#2a2a2a] pb-10 mt-20' >
        
-        <div className='md:w-[60%] w-80%  px-10 '>
+        <div className='md:w-[60%] w-80%  sm:px-10  px-5'>
           <div className='flex justify-between items-center my-5'>
             <span className='flex justify-center items-center gap-1'><lord-icon
               src="https://cdn.lordicon.com/qfijwmqj.json"
@@ -40,7 +40,7 @@ shipping=40
           </div>
 
  {
-      cartItems.length!=0?<><div className=' flex flex-col gap-1 my-2 h-fit px-10 md:px-0 '>
+      cartItems.length!=0?<><div className=' flex flex-col gap-1 my-2 h-fit sm:px-10 md:px-0 '>
 
             {
               cartItems.map(book=>{

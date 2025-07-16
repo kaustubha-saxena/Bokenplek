@@ -20,11 +20,11 @@ const CartCard = ({ params }) => {
     }
     return (
         <>
-            <div className='flex my-2 h-fit  after:content-[""] after:w-[90%] after:h-[2px] after:bg-[#787878] relative after:absolute after:bottom-[-10px] after:left-[10%] '>
+            <div className='flex my-2 h-fit  after:content-[""] after:w-[90%] after:h-[2px] after:bg-[#787878] relative after:absolute after:bottom-[-10px] after:left-[10%] max-w-[100%] '>
 
-                <img className='w-15' src={`/books/${params.genre}/${params.imgName}.png`} alt="" />
+                <img className='w-15 ' src={`/books/${params.genre}/${params.imgName}.png`} alt="" />
                 <div className='  flex  justify-between items-center w-[100%] px-3 relative  '>
-                    <div className=' w-[100%]'>
+                    <div className=' w-[40%]'>
                         <p className='truncate lg:text-sm xl:text-lg  font-semibold font-[Fredoka]'>{params.title}</p>
                         <p className='lg:text-xs xl:text-sm text-gray-300'>{params.author}</p>
                         <p className=' lg:text-sm xl:text-lg font-semibold'>₹ {params.priceAfterDiscount}</p>
