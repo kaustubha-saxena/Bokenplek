@@ -1,22 +1,30 @@
 "use client"
-import React, { use } from 'react'
+import React, { use, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRef, useState } from 'react'
-
-import { useSelector, useDispatch } from 'react-redux'
+import SearchCard from '../cards/SearchCard'
+import { useSelector, useDispatch, useStore } from 'react-redux'
 import Menu from '../menu'
+import { Button } from '@/components/ui/button'
+
 
 
 
 const Navbar2 = () => {
+  const [search, setsearch] = useState("")
+  const [book, setbook] = useState([])
+  const [loaded, setloaded] = useState(false)
   const cartItems = useSelector((state) => state.cart.cartItems);
-const [menu, setmenu] = useState(false)
+  const [menu, setmenu] = useState(false)
   let qty = 0
 
-  const handlemenu=()=>{
+  const handlemenu = () => {
     setmenu(!menu)
 
+  }
+  const handleSearch = (e) => {
+    setsearch(e.target.value)
   }
 
   cartItems.forEach(element => {
@@ -25,6 +33,26 @@ const [menu, setmenu] = useState(false)
   });
   const searchInputRef = useRef(null);
 
+  const fetchbook = async () => {
+    let res = await fetch("/api/fetchbook", {
+      method: "POST",
+      body: JSON.stringify({})
+    })
+    let data = await res.json().then((re) => {
+
+      setbook(re)
+      setloaded(true)
+      console.log("leeeengthhhhh", re.length);
+
+    })
+
+  }
+  useEffect(() => {
+    fetchbook()
+
+
+
+  }, [search])
 
   return (
     <>
@@ -38,7 +66,7 @@ const [menu, setmenu] = useState(false)
           </Link>
 
 
-          <div className='flex items-center justify-center  w-1/2 '>
+          <div className='flex items-center justify-center  w-1/2  relative'>
             <button onClick={() => {
               searchInputRef.current.focus()
 
@@ -58,9 +86,35 @@ const [menu, setmenu] = useState(false)
               </lord-icon>
             </button>
 
-            <input className=' rounded-full    border-none  px-1 py-1 focus:outline-none text-white bg-transparent placeholder:text-gray-300 ' type="text" name="search" id="search" placeholder='Search...' ref={searchInputRef} />
+            <input className=' rounded-full    border-none  px-1 py-1 focus:outline-none text-white bg-transparent placeholder:text-gray-300 ' value={search} onChange={handleSearch} type="text" name="search" id="search" placeholder='Search...' ref={searchInputRef} />
+
+
+            {
+              loaded  && search!=""? <>
+           
+                <div className='w-90 h-fit max-h-115 overflow-hidden flex flex-col gap-3 bg-[#212121] absolute top-10 left-25 p-2 '>
+                      {
+
+                        book.map((item, count = 0) => {
+                          if (item.title?.toLowerCase().includes(search)) {
+                            return (
+
+                              <SearchCard key={item._id} params={item} setsearch={setsearch} />
+
+                            )
+
+                          }
+
+                        })
+                      }
+                    </div>
+
+              </> : <></>
+            }
+
           </div>
         </div>
+
         <ul className="flex justify-center items-center gap-4 font-normal md:text-sm  lg:text-base xl:text-lg text-gray-300 ">
           <li className='hover:font-bold hover:cursor-pointer  '><Link href="/">Home</Link></li>
           <li className='hover:font-bold hover:cursor-pointer'><Link href="/bestseller">Best Seller</Link></li>
@@ -83,9 +137,10 @@ const [menu, setmenu] = useState(false)
 
 
       </nav >
- {menu && (
-      <Menu menu={menu} setmenu={setmenu}/>
-    )}
+      {menu && (
+        <Menu menu={menu} setmenu={setmenu} />
+      )
+      }
 
       <nav className='flex justify-between items-center w-[100%] h-1 absolute top-0 text-white z-99 p-8 block md:hidden '>
         <div >
