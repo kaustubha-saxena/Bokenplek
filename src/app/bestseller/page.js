@@ -149,7 +149,7 @@ const [genre, setgenre] = useState([
         <div className=' mt-20 flex justify-end px-15 relative z-99'>
             
         </div>
-        {loaded ? <div className='flex  justify-center h-fit items-center lg:gap-10 xl:gap-10  w-[100%] flex-wrap lg:flex-1/4 py-10 px-15 '>
+        {loaded ? <div className='flex justify-center items-center  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-15 flex-wrap lg:flex-1/4'>
 
           {
             Book.map(book => {

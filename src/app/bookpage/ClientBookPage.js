@@ -65,7 +65,7 @@ const ClientBookPage = () => {
         </div>
       </div>
 
-      <div className='w-full h-fit py-4 px-50 bg-[#212121] text-white'>
+      <div className='w-full h-fit py-4 md: xl:px-50 bg-[#212121] text-white'>
         <h3 className='text-2xl font-bold my-3'>Product Details</h3>
         <div className='flex gap-10 my-6 text-lg'>
           <div className='font-semibold'>

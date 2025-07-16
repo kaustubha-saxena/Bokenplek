@@ -32,6 +32,7 @@ console.log(username);
       <div className='w-full h-full bg-black absolute top-0 left-0 opacity-60'>
 
       </div>
+<div className='w-full h-full flex justify-center items-center'>
 
 
       <Carousel orientation='horizontal' className="w-full absolute top-0 z-5"
@@ -109,6 +110,7 @@ console.log(username);
 
         </CarouselContent>
       </Carousel>
+        </div>
 
 
     </div>
