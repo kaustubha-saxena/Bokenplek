@@ -66,7 +66,7 @@ const Navbar2 = () => {
           </Link>
 
 
-          <div className='flex items-center justify-center  w-1/2  relative'>
+          <div className='flex items-center justify-center   max-w-1/2  relative '>
             <button onClick={() => {
               searchInputRef.current.focus()
 
@@ -85,6 +85,7 @@ const Navbar2 = () => {
 
               </lord-icon>
             </button>
+<div className='relative'>
 
             <input className=' rounded-full    border-none  px-1 py-1 focus:outline-none text-white bg-transparent placeholder:text-gray-300 ' value={search} onChange={handleSearch} type="text" name="search" id="search" placeholder='Search...' ref={searchInputRef} />
 
@@ -92,25 +93,26 @@ const Navbar2 = () => {
             {
               loaded  && search!=""? <>
            
-                <div className='w-90 h-fit max-h-115 overflow-hidden flex flex-col gap-3 bg-[#212121] absolute top-10 left-25 p-2 '>
+                <div className='w-90 h-fit max-h-115 overflow-hidden flex flex-col gap-3 bg-[#212121] absolute md:top-7 left-0 p-2 '>
                       {
-
+                        
                         book.map((item, count = 0) => {
                           if (item.title?.toLowerCase().includes(search)) {
                             return (
-
+                              
                               <SearchCard key={item._id} params={item} setsearch={setsearch} />
-
+                              
                             )
-
+                            
                           }
-
+                          
                         })
                       }
                     </div>
 
               </> : <></>
             }
+            </div>
 
           </div>
         </div>

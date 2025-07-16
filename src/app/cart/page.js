@@ -25,7 +25,7 @@ shipping=40
  
   return (
     <>
-      <div className=' flex px-30 w-full  text-white   bg-[#2a2a2a] pb-10 mt-20' >
+      <div className=' flex  md:px-10  xl:px-30 w-full  text-white   bg-[#2a2a2a] pb-10 mt-20' >
        
         <div className='w-[60%]'>
           <div className='flex justify-between items-center my-5'>
@@ -35,8 +35,8 @@ shipping=40
               colors="primary:#ffffff,secondary:#ffffff"
               className="w-7"
             >
-            </lord-icon><p className='text-lg font-bold'>Cart details</p></span>
-            <span className='text-sm'>Total Item: {qty} | To Pay: {totalSalePrice}</span>
+            </lord-icon><p className='md:text-sm xl:text-lg font-bold'>Cart details</p></span>
+            <span className= 'md:text-xs lg:text-sm'>Total Item: {qty} | To Pay: {totalSalePrice}</span>
           </div>
 
  {
@@ -48,7 +48,7 @@ shipping=40
               })
             }           
         
-          </div></>:<><div className=' flex flex-col gap-1 my-2 h-[70vh] bg-amber-100 text-[#2a2a2a] justify-center items-center '>
+          </div></>:<><div className=' flex flex-col gap-1 my-2 h-fit py-10 bg-amber-100 text-[#2a2a2a] justify-center items-center '>
           <div><lord-icon
               src="https://cdn.lordicon.com/qfijwmqj.json"
               trigger="loop" 
@@ -57,11 +57,11 @@ shipping=40
               colors="primary:#2a2a2a,secondary:#2a2a2a"
               width={300}
               height={300}
-              className="h-30 w-30 "
+              className="xl:h-30 xl:w-30 md:h-15 md:w-15 "
             >
             </lord-icon></div>
-            <p className='text-2xl font-bold'>Your cart is empty!</p>
-            <p className='text-lg font-medium'>It&apos;s a good day to buy the items you saved for later</p>
+            <p className='md:text-lg lg:text-xl xl:text-2xl font-bold'>Your cart is empty!</p>
+            <p className=' md:text-xs lg:text-base xl:text-lg font-medium'>It&apos;s a good day to buy the items you saved for later</p>
             <div className=' w-full flex justify-center items-center my-5'>
 
             <Link href={"/"}>
@@ -72,33 +72,33 @@ shipping=40
     }
           
         </div>
-        <div className='w-[50%] px-20  py-20 ml-5 '>
+        <div className='w-[50%] md:px-10 h-fit pt-20 ml-5  '>
           <div>
-            <span className='text-lg font-bold'>Price Summary</span>
+            <span className='md:text-lg xl:text-xl font-bold'>Price Summary</span>
           </div>
           <div className='px-3'>
 
-            <div className='flex justify-between items-center font-medium text-[#bcbcbc]'>
+            <div className='flex justify-between items-center md:text-sm lg:text-base xl:text-lg font-medium text-[#bcbcbc]'>
               <p>Order Total</p>
               <p> ₹ {totalMRP}.00</p>
             </div>
-            <div className='flex justify-between items-center font-medium text-[#bcbcbc]'>
+            <div className='flex justify-between items-center md:text-sm lg:text-base xl:text-lg font-medium text-[#bcbcbc]'>
               <p>Items Discount</p>
               <p>₹ {totalMRP-totalSalePrice}.00</p>
             </div>
-            <div className='flex justify-between items-center font-medium text-[#bcbcbc]'>
+            <div className='flex justify-between items-center md:text-sm lg:text-base xl:text-lg font-medium text-[#bcbcbc]'>
               <p>Shipping</p>
               <p>₹ {shipping}.00</p>
             </div>
-            <div className='flex justify-between items-center text-xl font-bold my-4 '>
+            <div className='flex justify-between items-center md:text-base lg:text-lg  xl:text-xl font-bold my-4 '>
               <p>To Pay</p>
               <p>₹ {totalSalePrice+shipping}.00</p>
             </div>
           </div>
 
-          <div className=' w-full flex justify-center items-center my-18'>
+          <div className=' w-full flex justify-center items-center md:mt-10 mt-18'>
 
-            <button className=' mx-auto  px-30 py-3 bg-amber-400 text-lg hover:cursor-pointer font-bold'>Buy Now</button>
+            <button className=' mx-auto   md:px-15 lg:px-20 px-30 py-3 bg-amber-400 md:text-base  lg:text-lg xl:text-xl hover:cursor-pointer font-bold'>Buy Now</button>
           </div>
 
 
