@@ -49,7 +49,7 @@ const TopRomance = () => {
 
 
 
-                {loaded ? <div className='flex justify-center items-center  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-10 flex-wrap lg:flex-1/4 '>
+                {loaded ? <div className='sm:px-5 px-3 flex justify-center items-center gap-y-6 gap-x-3 sm:gap-5  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-8 flex-wrap lg:flex-1/4'>
 
 
 

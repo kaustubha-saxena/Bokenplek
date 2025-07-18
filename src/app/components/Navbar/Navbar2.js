@@ -152,7 +152,7 @@ const Navbar2 = () => {
           </button>
         </div>
         <div><Link href={"/"} >
-          <Image src="/logo/Logo1.png" alt='Logo' width={100} height={100} className=' hover:cursor-pointer sm:w-[150px] md:w-[180px]  xl:w-[180px]  lg:w-[150px]' />
+          <Image src="/logo/Logo1.png" alt='Logo' width={100} height={100} className=' hover:cursor-pointer w-[150px] sm:w-[150px] md:w-[180px]  xl:w-[180px]  lg:w-[150px]' />
         </Link></div>
 
 
@@ -164,7 +164,7 @@ const Navbar2 = () => {
             colors="primary:#ffffff,secondary:#ffffff"
             width={100}
             height={100}
-            className="cursor-pointer"
+            className="cursor-pointer "
           >
           </lord-icon>
           <div className='h-4 w-4 rounded-full bg-amber-200 absolute top-[-5px] right-[-5px] flex justify-center items-center   text-[#2a2a2a] text-xs font-bold'>{qty}</div>

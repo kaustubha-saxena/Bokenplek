@@ -41,11 +41,11 @@ const SimilarBooks = ({ props }) => {
 
 
 
-            {loaded ? <div className='w-full h-[80vh] bg-transparent  top-[100vh] text-white'>
+            {loaded ? <div className='w-full h-fit bg-transparent relative text-white'>
                 < PageHeading Heading="SIMILAR BOOKS" />
 
 
-                {loaded ? <div className='flex justify-center items-center lg:gap-10 xl:gap-10   w-full flex-wrap lg:flex-1/4 py-10 px-15'>
+                {loaded ? <div className=' sm:px-5 px-3 flex justify-center items-center gap-y-6 gap-x-3 sm:gap-5  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-8 flex-wrap lg:flex-1/4'>
 
 
                     {

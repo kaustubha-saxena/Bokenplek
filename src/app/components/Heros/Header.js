@@ -6,7 +6,7 @@ const PageHeader = ({ params }) => {
 
     return (
         <>
-            <div className='h-[510px] w-full  bg-transparent relative top-0  overflow-hidden '>
+            <div className='h-[510px] max-h-[50vh] w-full  bg-transparent relative top-0  overflow-hidden '>
 
                 <Image
                     src={`/header/${params.genre}.jpg`}
@@ -25,11 +25,11 @@ const PageHeader = ({ params }) => {
                     initial={{ opacity: 0, y: 30  }}
                     animate={{ opacity: 1, y: 0}}
                     transition={{ delay: 0, duration: 2 }}>
-                <div className='absolute   text-white  top-0  w-full h-full text-center pt-40 ' >
+                <div className='absolute   text-white  top-0 px-5 w-full h-full text-center pt-40 ' >
 
-                    <h1 className='font-bold  lg:text-5xl xl:text-5xl 2xl:text-5xl font-[Libre] '> {params.header}
+                    <h1 className='font-bold text-xl   lg:text-5xl xl:text-5xl 2xl:text-5xl font-[Libre] '> {params.header}
                     </h1>
-                    <p className='lg:text-xl xl:text-2xl 2xl:text-3xl lg:my-10 font-semibold my-10 font-[Fredoka]'> {params.tagline}</p>
+                    <p className=' text-lg lg:text-xl xl:text-2xl 2xl:text-3xl lg:my-10 font-semibold my-10 font-[Fredoka]'> {params.tagline}</p>
 
                 </div>
                      </motion.div>

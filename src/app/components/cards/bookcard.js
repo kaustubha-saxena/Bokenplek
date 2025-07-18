@@ -4,17 +4,14 @@ import Image from 'next/image'
 const Bookcard = ({ props }) => {
   return (
     <>
-
       <Link href={`/bookpage?isbn=${props.isbn}`} onClick={() => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       }}>
-        <div className='relative flex-col justify-center items-center xl:w-[200px]  lg:w-[150px] md:w-[120px]  text-white hover:translate-y-[-15px] transition:transform duration-200 '>
+        <div className='relative flex-col justify-center items-center xl:w-[200px]  lg:w-[150px] md:w-[120px] sm:w-[140px] w-[170px]  text-white hover:translate-y-[-15px] transition:transform duration-200 '>
           {
-            props.tag === "Best Seller" ? <div className='w-15 absolute top-[-15px] right-[-15px] z-9'><img src="/icons/best-seller.png" alt="" /></div> : <></>
+            props.tag === "Best Seller" ? <div className=' w-15 md:w-15 absolute top-[-15px] right-[-15px] z-9'><img className='' src="/icons/best-seller.png" alt="" /></div> : <></>
           }
-
-
           <div className='w-full  h-fit relative group'>
 
             <Image

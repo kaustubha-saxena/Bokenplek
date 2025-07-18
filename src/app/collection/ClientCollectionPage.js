@@ -45,7 +45,7 @@ const ClientCollectionPage = () => {
               <Link className='hover:underline' href={"/genre"}>Genre </Link> &gt;
               <Link className='hover:underline' href={`/collection?genre=${genre}`}>{genre}</Link>
             </div>
-            <div className='flex justify-center items-center lg:gap-10 xl:gap-10 w-screen flex-wrap py-10 px-15'>
+            <div className='sm:px-5 px-3 flex justify-center items-center gap-y-6 gap-x-3 sm:gap-5  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-8 flex-wrap lg:flex-1/4'>
               {Book.map(book => (
                 <Bookcard key={book._id} props={book} />
               ))}

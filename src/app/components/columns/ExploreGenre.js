@@ -28,6 +28,8 @@ const ExploreGenre = () => {
 
 
         <>
+        <div className='hidden sm:block'>
+
             {loaded ? <><div className='flex-col  pt-3 '>
 
                 <h1 className='text-white font-bold text-4xl mx-4 font-[Libre] text-center my-6 mt-10'>Pick a Genre, Start Your Journey</h1>
@@ -38,12 +40,13 @@ const ExploreGenre = () => {
                     {genre.map(item => {
                         return <GenreCard key={item._id} props={item} />
                     })
-                    }
+                }
 
 
                 </div>
             </div>
             </> : <></>}
+                </div>
         </>
     )
 }
