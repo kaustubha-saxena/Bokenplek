@@ -40,7 +40,7 @@ const NewArrivals = () => {
             < PageHeading Heading="New Arrivals" />
 
 
-            {loaded ? <div className='sm:px-5 px-3 flex justify-center items-center gap-y-6 gap-x-3 sm:gap-5  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-8 flex-wrap lg:flex-1/4'>
+            {loaded ? <div className='sm:px-0 px-3 flex justify-center items-center gap-y-6 gap-x-3 sm:gap-4  md:gap-5 lg:gap-10 xl:gap-10   w-full mt-8 flex-wrap lg:flex-1/4'>
 
 
 
@@ -48,7 +48,10 @@ const NewArrivals = () => {
                 <Bookcard props={Book[1]} />
                 <Bookcard props={Book[2]} />
                 <Bookcard props={Book[3]} />
-                <Bookcard props={Book[4]} />
+                <span className='hidden md:block'>
+
+                <Bookcard  props={Book[4]}  />
+                </span>
 
 
 
