@@ -58,7 +58,11 @@ const TopRomance = () => {
                     <Bookcard props={Book[1]} />
                     <Bookcard props={Book[2]} />
                     <Bookcard props={Book[3]} />
-                    <Bookcard props={Book[4]} />
+                    <span className='hidden md:block'>
+
+                <Bookcard  props={Book[4]}  />
+                </span>
+
 
                 </div>
 

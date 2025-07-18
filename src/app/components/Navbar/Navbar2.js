@@ -42,7 +42,7 @@ const Navbar2 = () => {
 
       setbook(re)
       setloaded(true)
-      console.log("leeeengthhhhh", re.length);
+      // console.log("leeeengthhhhh", re.length);
 
     })
 
@@ -97,7 +97,7 @@ const Navbar2 = () => {
                       {
                         
                         book.map((item, count = 0) => {
-                          if (item.title?.toLowerCase().includes(search)) {
+                          if (item.title?.toLowerCase().includes(search.toLowerCase())) {
                             return (
                               
                               <SearchCard key={item._id} params={item} setsearch={setsearch} />
@@ -118,9 +118,10 @@ const Navbar2 = () => {
         </div>
 
         <ul className="flex justify-center items-center gap-4 font-normal md:text-sm  lg:text-base xl:text-lg text-gray-300 ">
+         
           <li className='hover:font-bold hover:cursor-pointer  '><Link href="/">Home</Link></li>
           <li className='hover:font-bold hover:cursor-pointer'><Link href="/bestseller">Best Seller</Link></li>
-          <li className='hover:font-bold hover:cursor-pointer'><Link href="/dashboard">New Arrivals</Link></li>
+          {/* <li className='hover:font-bold hover:cursor-pointer'><Link href="/dashboard">New Arrivals</Link></li> */}
           <li className='hover:font-bold hover:cursor-pointer'><Link href="/genre">Genre</Link></li>
           <li  ><button className=' rounded-md px-2 py-1 font-bold hover:cursor-pointer  hover:bg-amber-200 bg-amber-200 text-black'>Login</button></li>
           <li className='relative'><Link href="/cart">
@@ -139,10 +140,17 @@ const Navbar2 = () => {
 
 
       </nav >
+
+
+
+
       {menu && (
         <Menu menu={menu} setmenu={setmenu} />
       )
       }
+
+
+
 
       <nav className='flex justify-between items-center w-[100%] h-1 absolute top-0 text-white z-99 p-8 block md:hidden '>
         <div >
