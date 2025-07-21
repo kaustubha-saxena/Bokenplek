@@ -8,7 +8,7 @@ const GenreCard = ({ props }) => {
     <>
       <Link href={`/collection?genre=${props.genre}`}>
 
-        <div className=' xl:w-[240px] lg:w-[200px] xl:h-40 lg:h-30 md:w-[150px] md:h-25 rounded-xl overflow-hidden relative hover:translate-y-[-20px] hover:transition-transform duration-100 hover:cursor-pointer'>
+        <div className=' xl:w-[240px] lg:w-[200px] xl:h-40 lg:h-30 md:w-[150px] md:h-25 rounded-xl overflow-hidden relative hover:translate-y-[-15px] hover:transition-transform duration-100 hover:cursor-pointer'>
           <Image
             src={`/header/${props.genre}.jpg`}
             fill={true}
